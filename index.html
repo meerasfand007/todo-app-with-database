@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC3k0MzV0EViJGuLxFuYQcCDZkSGilJN6k",
+    authDomain: "cloudtodoapp.firebaseapp.com",
+    databaseURL: "https://cloudtodoapp.firebaseio.com",
+    projectId: "cloudtodoapp",
+    storageBucket: "cloudtodoapp.appspot.com",
+    messagingSenderId: "797813791697",
+    appId: "1:797813791697:web:0eb97663d063fdb9a65ef0",
+    measurementId: "G-M9JVDLMPW4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+</head>
+
+<body class="mainBody">
+    <div class="wrapper">
+        <div class="link_wrapper">
+            <a href="todo.html">Enter Todo</a>
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+              <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+            </svg>
+            </div>
+        </div>
+
+    </div>
+
+    <iframe scrolling="no" frameborder="no" class="iframeindex" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:412px;height:54px;" src="https://www.clocklink.com/html5embed.php?clock=036&timezone=GMT0500&color=black&size=412&Title=&Message=&Target=&From=2020,1,1,0,0,0&Color=black"></iframe>
+
+    <div class="footer">
+        <h3> &copy; Asfandyar Meer </h3>
+
+    </div>
+
+
+    <!-- script -->
+</body>
+
+</html>

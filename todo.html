@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!-- firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC3k0MzV0EViJGuLxFuYQcCDZkSGilJN6k",
+    authDomain: "cloudtodoapp.firebaseapp.com",
+    databaseURL: "https://cloudtodoapp.firebaseio.com",
+    projectId: "cloudtodoapp",
+    storageBucket: "cloudtodoapp.appspot.com",
+    messagingSenderId: "797813791697",
+    appId: "1:797813791697:web:0eb97663d063fdb9a65ef0",
+    measurementId: "G-M9JVDLMPW4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+    
+    <title>Todo App</title>
+</head>
+
+<body>
+
+    <div class="navbar-custom">
+        <img src="images/todologo.png" class="todologo" alt="">
+        <iframe scrolling="no" frameborder="no" clocktype="html5" class="iframethree" style="overflow:hidden;border:0;margin:0;padding:0;width:120px;height:40px;" src="https://www.clocklink.com/html5embed.php?clock=043&timezone=GMT0500&color=black&size=120&Title=&Message=&Target=&From=2020,1,1,0,0,0&Color=black"></iframe>
+
+    </div>
+    <h3 class="directTodo"> <span style="color:teal"> Enter your Todo Tasks </span></h3>
+
+    <div class="input">
+
+        <input type="text" class="todoInput" id="todoAdd" placeholder="Enter Task">
+        <button class="btn btn-success  btnAdd" onclick="addItem()">Add</button>
+        <button class="btn btn-danger  btnDeleteAll" onclick="deleteAll()">Delete All</button>
+    </div>
+
+
+    <div class="tododiv">
+        <ul id="todoItem" class="mainlist">
+        </ul>
+    </div>
+
+    <div class="iframes">
+        <h3>&gt;How to make a <span style="color: teal;">ToDo List</span>:</h3>
+        <iframe width="560" height="315" class="iframetwo" src="https://www.youtube.com/embed/ua27gc_090E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3>&gt;How to Organise your day <span style="color: teal;">a small visual guide</span>:</h3>
+        <iframe class="iframeone" width="560" height="315" style="margin-top: 10px;" src="https://www.youtube.com/embed/nh-JUsmAiQI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="guide">
+        <p><span style="color: teal;"> 1. KEEP ONLY FOUR ITEMS ON YOUR DESK</span> Clear the clutter–trinkets and extra papers and Post-It notes and staplers and tape and that mug filled with 50 pens–and leave room only for your computer, inbox–the old school
+            paper tray kind, if that’s your thing–phone, and to-do list. “This is your workspace, and to get work done, you need the space,” says Cohen. <br>
+            <span style="color: teal;"> 2. KEEP A DIGITAL TO-DO LIST </span> Speaking of that to-do list: Consider skipping the paper version and keep a digital list instead. Why? “A digital list allows you to search, which is a powerful advantage over
+            paper,” explains Frank Buck, author of Get Organized! Time Management for School Leaders. For example, Buck says, “Let’s say Jim walks in the door unexpectedly. You can search for ‘Jim’ on your list, and watch the list highlight only the things
+            you need to talk with him about. Or when you have down time, you can search for ‘call,’ and you will see a list of phone calls you could be making during that time, so you’re not wasting the time.” <br>
+            <span style="color: teal;"> 3. SET ASIDE 15 MINUTES AT THE END OF EACH DAY</span> No, those last 15 minutes aren’t for deep breaths before you leave. They’re to set yourself up for success tomorrow. “Fifteen minutes before you leave for the
+            day, put things away: file papers, return items to other offices, bring recyclables or trash to where it needs to go, rewrite your to-do list,” says Cohen. “You will come to work the next morning with a neat work area and a direction for the
+            day.” <br> <span style="color: teal;"> 4. SCHEDULE “ORGANIZING” OR “FILING” </span>TIME But don’t wait until the end of the day to get all your organizing on, warns Cohen. (If you do, you may need more than 15 minutes to get on track for tomorrow.)
+            Throughout the day, “even 10 minutes can make a difference,” Cohen says. “When you schedule lunch and meetings, you go, right? So add [organization time] to your day. You can even return phone calls while you do—just put the phone on speaker.”
+            <br> <span style="color:teal"> 5. PUT REPEATING TASKS ON AUTOPILOT </span> “Every job has projects that recur every year at the same time,” points out Buck. “And every job has little tasks that need to be handled weekly and monthly. Don’t
+            reinvent the wheel every time you tackle one of the recurring projects.” Here, automation tools can be your best friend: prewritten ‘thank you’ emails to customers that you can copy and paste–or put on short-key–will save you valuable typing
+            time. If your job keeps you on social media, there are tools you can use that will post for you. Just do a search for the tools that will help you most, and employ them as soon as possible.
+        </p>
+
+    </div>
+
+
+
+    <div class="footer">
+        <h3> &copy; Asfandyar Meer </h3>
+
+    </div>
+
+    <!-- script -->
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>

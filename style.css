@@ -1,0 +1,197 @@
+        .mainBody {
+            background-image: url(images/todo1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .navbar-custom {
+            background-color: #333;
+            height: 70px;
+            width: 100%;
+            background-image: url(images/todo1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .iframethree {
+            margin-top: 15px !important;
+        }
+        
+        .navbar-h {
+            display: inline-block;
+            margin-top: 5px;
+            text-decoration: underline;
+            color: white;
+            font-weight: bolder;
+        }
+        
+        .todologo {
+            margin-top: 3px;
+            width: 65px;
+            height: 62px;
+        }
+        
+        .input {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .directTodo {
+            display: inline-block;
+            position: absolute;
+            top: 89px;
+            left: 5px;
+            text-decoration: underline overline;
+        }
+        
+        .todoInput {
+            height: 40px;
+            width: 30%;
+        }
+        
+        .editButton {
+            margin-left: 5px !important;
+        }
+        
+        .deleteButton {
+            margin-left: 7px !important;
+        }
+        
+        .listText {
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 10px;
+        }
+        
+        @media only screen and (max-width: 1070px) {
+            .directTodo {
+                display: block;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .iframeone,
+            .iframetwo {
+                width: 90%;
+            }
+            .todoInput {
+                width: 80%;
+            }
+            .directTodo {
+                position: relative;
+                top: 10px;
+                left: 0px;
+            }
+            .guide {
+                width: 90%;
+                margin-left: 0px;
+                margin-top: 0px;
+            }
+            .mainBody {
+                background-image: url(images/todomobile.jpg);
+                background-repeat: repeat-y;
+            }
+            .iframeindex {
+                width: 90% !important;
+                margin-left: 0px;
+            }
+        }
+        
+        span {
+            font-weight: bold;
+        }
+        
+        p {
+            text-align: justify;
+            line-height: 2em;
+        }
+        
+        .guide {
+            width: 97%;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            background-color: rgb(155, 155, 155);
+            color: teal;
+            font-weight: bolder;
+            text-align: center;
+        }
+        /* ex */
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+            background-blend-mode: multiply, multiply;
+        }
+        
+        .wrapper {
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .link_wrapper {
+            position: relative;
+        }
+        
+        a {
+            display: block;
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            background: #333;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 3px solid #333;
+            transition: all .35s;
+        }
+        
+        .icon {
+            width: 50px;
+            height: 50px;
+            border: 3px solid transparent;
+            position: absolute;
+            transform: rotate(45deg);
+            right: 0;
+            top: 0;
+            z-index: -1;
+            transition: all .35s;
+        }
+        
+        .icon svg {
+            width: 30px;
+            position: absolute;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+            transform: rotate(-45deg);
+            fill: #333;
+            transition: all .35s;
+        }
+        
+        a:hover {
+            width: 200px;
+            border: 3px solid #333;
+            background: transparent;
+            color: white;
+            font-weight: bold;
+            font-size: larger;
+            text-decoration: underline overline;
+        }
+        
+        a:hover+.icon {
+            border: 3px solid #333;
+            right: -25%;
+        }
